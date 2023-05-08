@@ -1,11 +1,12 @@
 body{
-    background-color: #212121;
-    color: aliceblue;
+    background-color: white;
+    color: black;
     font-family: 'Graphik', sans-serif;
 }
 
 /* Header */
 .header{
+    padding-top: 1rem;
     display: grid;
     grid-template-columns: 24.5% 14.5% 14.5% 14.5% 15.5% 15.5%;
     padding-left: 10%;
@@ -16,6 +17,11 @@ body{
 .header a{
     text-decoration: none;
     color: aliceblue;
+
+}
+
+.header a:hover{
+    text-decoration: underline;
 }
 
 
@@ -24,7 +30,6 @@ body{
     display: grid;
     grid-template-columns: 33% 33% 33%;
     text-align: center;
-    background-color: #212121;
     margin: 0 auto;
 }
 
@@ -169,7 +174,7 @@ body{
 }
 
 .table{
-    color: aliceblue;
+    color: black;
 }
 
 
@@ -181,6 +186,17 @@ body{
     color: aliceblue;
 }
 
+@media (max-width: 720px) {
+    .landing-video {
+    margin-top: -5rem;
+      width: 480px;
+      height: 480px;
+    }
+  }
 
+/* Paginas */
+.titulo-pagina{
+    margin-top: 1rem;
+}
 
 

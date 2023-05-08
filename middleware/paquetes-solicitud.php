@@ -1,4 +1,6 @@
 <?php
+require_once 'vendor/autoload.php';
+
 $db = new Base;
 $con = $db->ConexionBD();
 
@@ -23,8 +25,21 @@ $con = $db->ConexionBD();
         // ejecución de la consulta SQL
         $stmt->execute();
 
+        //Mandar un correo al administrador
+         $to = "guedea.fis@gmail.com";
+         $subject = "Solicitud En Pagina Web";
+         $message = $Mensaje . " De la Fecha: " . $Fecha . " Telefono: " . $Telefono;
+         $headers = "From: " . $Email;
+
+         mail($to, $subject, $message, $headers);
+
+         // if(mail($to, $subject, $message, $headers)) {
+         //    echo "El correo electrónico se ha enviado correctamente.";
+         // } else {
+         //    echo "Error al enviar el correo electrónico.";
+         // }
+
         //Redireccionar a la pagina principal
         header('Location: /');
    }
-
 ?>

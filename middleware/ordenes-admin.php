@@ -39,7 +39,7 @@ $fin = min($inicio + $elementosPorPagina - 1, $total - 1);
 $stmt = $conn->prepare('SELECT Orden.ID, Usuario.Nombre, Usuario.Email, Descripcion,Fecha_Inicio, Ruta_archivos
 FROM Orden
 INNER JOIN Usuario
-ON Usuario.ID = Orden.ID_Usuario ORDER BY Orden.ID desc OFFSET ? ROWS FETCH NEXT ? ROWS ONLY');
+ON Usuario.ID = Orden.ID_Usuario ORDER BY Orden.ID desc');
 $stmt->bindValue(1, $offset, PDO::PARAM_INT);
 $stmt->bindValue(2, $limit, PDO::PARAM_INT);
 $stmt->execute();

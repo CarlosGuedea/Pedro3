@@ -7,6 +7,7 @@ class ordenesController{
         include 'middleware/autenticacion-user.php';
         include 'middleware/ordenes-user.php';
         include 'views/ordenes/ordenes.php';
+        include 'views/layouts/footer.php';
     }
 
     public static function nuevaOrden(){

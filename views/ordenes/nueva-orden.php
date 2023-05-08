@@ -1,9 +1,9 @@
 <form action="/nueva-orden" method="post" enctype="multipart/form-data" id="cargaImagen" onsubmit="mostrarCarga()">
-<div class="row align-items-center">
-        <h1 class="login-titulo">Orden de Trabajo</h1>
-    </div>
+
+    
     <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
+        <h1 style="justify-content:center;" class="titulo-pagina">Orden de Trabajo</h1>
             <label for="Email">Nombre de la Campaña</label>
             <input type="text" name="Descripcion" id="" required class="form-control">
         </div>
@@ -35,7 +35,7 @@ function mostrarCarga() {
 }
 
 
-const MAXIMO_TAMANIO_BYTES = 3000000; // 1MB = 1 millón de bytes
+const MAXIMO_TAMANIO_BYTES = 10000000; // 1MB = 1 millón de bytes
 
 // Obtener referencia al elemento
 const $miInput = document.querySelector("#miInput");

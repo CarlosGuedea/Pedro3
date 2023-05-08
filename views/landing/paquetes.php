@@ -27,7 +27,7 @@
         <textarea id="mensaje" name="Mensaje" rows="5" cols="60" required></textarea><br>
 
         <label for="fecha">Fecha:</label><br>
-        <input type="text" id="fecha" name="Fecha" value="<?php echo date('Y/m/d')?>" required><br>
+        <input type="text" id="fecha" name="Fecha" value="<?php echo date('Y/m/d') ?>" readonly required><br>
 
         <input type="submit" value="Enviar" id="EnviarOrden">
     </form>
@@ -36,7 +36,7 @@
 <script src="http://js.stripe.com/v3/"></script>
 
 <script>
-    const stripe = Stripe("pk_test_51MqelmDFy3xOvEs5ndlJqfk3xbuaTsw4h72UYJNepVNt2MJ8CDbojXE27T4nGvpTCKTtCEv5KG5YHVXb9sP08XK100e9KLHK90");
+    const stripe = Stripe("pk_test_51MrjrLBt6oMC655BeBos4v2NJizdlxFgKz3iTcSx7mhDEfbzSkN4SZMGEWHflsok7gRs2JHLADeUVolvA0c4Xat500JgP4xxqZ");
 
     //Paquete basic
     const basic = document.querySelector(".basic");

@@ -3,6 +3,7 @@ class homeController{
     public static function index(){
         include 'views/layouts/header.php';
         include 'views/landing/landing.php';
+        include 'views/Register/registro.php';
         include 'views/layouts/footer.php';
     }
 

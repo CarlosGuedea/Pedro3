@@ -12,6 +12,8 @@ session_start();
     <link rel="stylesheet" href="../../public/bootstrap.css">
     <link rel="stylesheet" href="../../public/style.css">
     <link href="https://fonts.cdnfonts.com/css/graphik" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+    
 </head>
 <body>
             <div class="header">
@@ -20,5 +22,4 @@ session_start();
                 <a href="/nosotros"><p class="header-paquetes">Nosotros</p></a>
                 <a href="/login"><p class="header-login">Login</p></a>
                 <a href="/registro"><p class="header-registrarse">Registrarse</p></a>
-                <a href="/compras"><p class="header-compras">Compras</p></a>
             </div>

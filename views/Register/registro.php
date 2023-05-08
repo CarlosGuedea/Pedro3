@@ -1,6 +1,6 @@
 <form action="/registro" method="post">
 <div class="container login">
-    <div class="row align-items-center">
+    <div class="row align-items-center" style="text-align:center; margin-top:2rem;">
         <h1 class="login-titulo">Registro</h1>
     </div>
     <div class="row justify-content-center">

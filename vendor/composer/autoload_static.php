@@ -15,6 +15,10 @@ class ComposerStaticInitccf75e9ea54378c20ea695f777cd3ec0
         array (
             'Stripe\\' => 7,
         ),
+        'P' => 
+        array (
+            'PHPMailer\\PHPMailer\\' => 20,
+        ),
         'G' => 
         array (
             'Guede\\Produccion\\' => 17,
@@ -29,6 +33,10 @@ class ComposerStaticInitccf75e9ea54378c20ea695f777cd3ec0
         'Stripe\\' => 
         array (
             0 => __DIR__ . '/..' . '/stripe/stripe-php/lib',
+        ),
+        'PHPMailer\\PHPMailer\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
         ),
         'Guede\\Produccion\\' => 
         array (

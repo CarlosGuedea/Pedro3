@@ -6,7 +6,7 @@ require 'controllers/registerController.php';
 require 'controllers/ordenesController.php';
 require 'controllers/adminController.php';
 require 'controllers/sesionController.php';
-require 'controllers/comprasController.php';
+require 'controllers/stripeController.php';
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/', [homeController::class, 'index']);
@@ -41,17 +41,15 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
 
     $r->addRoute(['GET', 'POST'], '/admin-orden-detalle/{id:\d+}', [ordenesController::class, 'adminOrdenDetalle']);
 
-    $r->addRoute(['GET', 'POST'], '/compras', [comprasController::class, 'index']);
+    $r->addRoute(['GET', 'POST'], '/stripe-basic', [stripeController::class, 'stripeBasic']);
 
-    $r->addRoute(['GET', 'POST'], '/stripe-basic', [comprasController::class, 'stripeBasic']);
+    $r->addRoute(['GET', 'POST'], '/stripe-standard', [stripeController::class, 'stripeStandard']);
 
-    $r->addRoute(['GET', 'POST'], '/stripe-standard', [comprasController::class, 'stripeStandard']);
+    $r->addRoute(['GET', 'POST'], '/stripe-premium', [stripeController::class, 'stripePremium']);
 
-    $r->addRoute(['GET', 'POST'], '/stripe-premium', [comprasController::class, 'stripePremium']);
+    $r->addRoute(['GET', 'POST'], '/success', [stripeController::class, 'success']);
 
-    $r->addRoute(['GET', 'POST'], '/success', [comprasController::class, 'success']);
-
-    $r->addRoute(['GET', 'POST'], '/cancel', [comprasController::class, 'cancel']);
+    $r->addRoute(['GET', 'POST'], '/cancel', [stripeController::class, 'cancel']);
 
     $r->addRoute(['GET'], '/cerrar-sesion', [sesionController::class, 'cerrarSesion']);
 });
