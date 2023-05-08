@@ -23,7 +23,7 @@ try{
             $id = $_SESSION['ID']=$row['ID'];
             $usuario = $_SESSION['Usuario']=$row['Email'];
             $_SESSION['Contrasena']=$truecontrasena;
-            header('Location: /AdminPanel');
+            header('Location: /AdminPanel/ordenes/1');
     
         }
     }
