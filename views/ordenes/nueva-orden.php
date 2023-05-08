@@ -11,7 +11,7 @@
     <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
             <label for="Email">Fecha de inicio</label>
-            <input type="text" name="Fecha_Inicio" id="" required class="form-control" value="<?php echo date('Y/m/d')?>">
+            <input type="text" name="Fecha_Inicio" id="" required readonly class="form-control" value="<?php echo date('Y/m/d')?>">
         </div>
     </div>
     <div class="row justify-content-center">
